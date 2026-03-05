@@ -1,5 +1,5 @@
 
-### 🔹 Staging (`models/staging/`)
+## Staging (`models/staging/`)
 - Rename columns
 - Type casting
 - Simple transformations
@@ -9,7 +9,7 @@
 
 > Clean starting point. Acts as a gatekeeper layer.
 
-### 🔹 Intermediate (`models/intermediate/`)
+## Intermediate (`models/intermediate/`)
 - Joins between staging models
 - Business logic
 - Aggregations
@@ -21,7 +21,7 @@
 
 ---
 
-### 🔹 Marts (`models/marts/`)
+## Marts (`models/marts/`)
 - Final business-ready tables
 - Denormalized
 - Aggregated
@@ -33,6 +33,7 @@
 ---
 
 ## 📂 Structure
+```bash
 models/
 staging/
 intermediate/
@@ -40,7 +41,7 @@ marts/
 seeds/
 macros/
 tests/
-
+```
 
 ---
 
@@ -75,7 +76,7 @@ Install dependencies (if using packages.yml):
 ```bash
 dbt deps
 ```
-### 🌱 Seeds (Load CSV Files)
+### Seeds (Load CSV Files)
 Load CSV files from seeds/ into database:
 ```bash
 dbt seed
@@ -85,7 +86,7 @@ Force reload (drop & recreate tables):
 dbt seed --full-refresh
 ```
 
-### 🏃 Run Models
+### Run Models
 Run all models:
 ```bash
 dbt run
@@ -117,7 +118,7 @@ Run upstream + downstream:
 dbt run -m +model_name+
 ```
 
-### 🧪 Testing
+### Testing
 Run all tests:
 ```bash
 dbt test
@@ -126,7 +127,7 @@ Test specific model:
 ```bash
 dbt test -m model_name
 ```
-### 🏗 Build (Run + Test Together)
+### Build (Run + Test Together)
 Run models and tests:
 ```bash
 dbt build
@@ -136,9 +137,8 @@ dbt build
 ```bash
 dbt build -m model_name
 ```
-📊 Documentation
+### Documentation
 Generate docs:
-
 ```bash
 dbt docs generate
 ```
@@ -147,12 +147,12 @@ Serve docs locally:
 ```bash
 dbt docs serve
 ```
-### 🧹 Clean Project
+### Clean Project
 Remove compiled artefacts:
 ```bash
 dbt clean
 ```
-🚀 Recommended Daily Workflow
+Recommended Daily Workflow
 ```bash
 dbt debug
 dbt seed
