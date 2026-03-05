@@ -32,7 +32,7 @@
 
 ---
 
-## 📂 Structure
+## Structure
 ```bash
 models/
 staging/
@@ -45,7 +45,7 @@ tests/
 
 ---
 
-## 🏷 Naming Conventions
+## Naming Conventions
 
 Follow dbt Labs style guidelines.
 
@@ -61,7 +61,7 @@ Follow dbt Labs style guidelines.
 
 ---
 
-## ⚙️ Important Commands
+## Important Commands
 
 ### Initialize Project
 
