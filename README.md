@@ -70,100 +70,92 @@ dbt init dbt_project
 Verify connection & configuration:
 ```bash
 dbt debug
+```
 Install dependencies (if using packages.yml):
 ```bash
 dbt deps
-🌱 Seeds (Load CSV Files)
-```bash
+```
+### 🌱 Seeds (Load CSV Files)
 Load CSV files from seeds/ into database:
 ```bash
 dbt seed
-
+```
 Force reload (drop & recreate tables):
 ```bash
 dbt seed --full-refresh
+```
 
-🏃 Run Models
+### 🏃 Run Models
 Run all models:
-
-bash
+```bash
 dbt run
+```
 Run specific model:
-
-bash
+```bash
 dbt run -m model_name
+```
 Run multiple models:
-
-bash
+```bash
 dbt run -m model_a model_b
+```
 Run by directory:
-
-bash
+```bash
 dbt run -m staging.*
 dbt run -m intermediate.*
 dbt run -m marts.*
+```
 Run model + downstream dependencies:
-
-bash
+```bash
 dbt run -m model_name+
+```
 Run upstream dependencies:
-
-bash
+```bash
 dbt run -m +model_name
+```
 Run upstream + downstream:
-
-bash
+```bash
 dbt run -m +model_name+
-🧪 Testing
+```
+
+### 🧪 Testing
 Run all tests:
-
-bash
+```bash
 dbt test
+```
 Test specific model:
-
-bash
+```bash
 dbt test -m model_name
-🏗 Build (Run + Test Together)
+```
+### 🏗 Build (Run + Test Together)
 Run models and tests:
-
-bash
+```bash
 dbt build
-Run specific model with tests:
+```
 
-bash
+### Run specific model with tests:
+```bash
 dbt build -m model_name
-🔍 Inspect Project
-List all resources:
-
-bash
-dbt ls
-List only models:
-
-bash
-dbt ls --resource-type model
-List seeds:
-
-bash
-dbt ls --resource-type seed
+```
 📊 Documentation
 Generate docs:
 
-bash
+```bash
 dbt docs generate
+```
+```bash
 Serve docs locally:
-
-bash
+```bash
 dbt docs serve
-🧹 Clean Project
-Remove compiled artifacts:
-
-bash
+```
+### 🧹 Clean Project
+Remove compiled artefacts:
+```bash
 dbt clean
+```
 🚀 Recommended Daily Workflow
-bash
+```bash
 dbt debug
 dbt seed
 dbt run -m model_name
 dbt test
 dbt build
-
