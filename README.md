@@ -66,23 +66,23 @@ Follow dbt Labs style guidelines.
 
 ```bash
 dbt init dbt_project
-
+```
 Verify connection & configuration:
-bash
+```bash
 dbt debug
 Install dependencies (if using packages.yml):
-
-bash
+```bash
 dbt deps
 🌱 Seeds (Load CSV Files)
+```bash
 Load CSV files from seeds/ into database:
-
-bash
+```bash
 dbt seed
-Force reload (drop & recreate tables):
 
-bash
+Force reload (drop & recreate tables):
+```bash
 dbt seed --full-refresh
+
 🏃 Run Models
 Run all models:
 
