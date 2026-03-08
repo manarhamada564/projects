@@ -1,0 +1,6 @@
+sources:
+  - name: stripe
+    database: dbt_db
+    schema: public
+    tables:
+      - name: payments
