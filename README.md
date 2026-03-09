@@ -159,3 +159,15 @@ dbt seed
 dbt run -m model_name
 dbt test
 dbt build
+```
+## Testing
+In dbt, there are two types of tests - ***generic tests and singular*** tests:
+**Generic tests** are a way to validate your data models and ensure data quality. These tests are predefined and can be applied to any column of your data models to check for common data issues. They are written in YAML files.
+**Singular tests** are data tests defined by writing specific SQL queries that return records which fail the test conditions. These tests are referred to as "singular" because they are one-off assertions that are uniquely designed for a single purpose or specific scenario within the data models.
+```bash
+Tests can be run against your current project using a range of commands:
+dbt test runs all tests in the dbt project
+dbt test --select test_type:generic
+dbt test --select test_type:singular
+dbt test --select one_specific_model
+```
